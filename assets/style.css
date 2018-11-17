@@ -1,0 +1,23 @@
+.btn, .form-control, .breadcrumb, .alert{
+	border-radius: 1px;
+}
+body{
+}
+.card-header{
+	border-radius: 1px !important;
+}
+#content-wrapper{
+	background: #f2f2f2;
+}
+.sidebar{
+	border-right: 1px solid #eee;
+	padding-top: 50px;
+}
+.sidebar li a{
+	color: #555 !important;
+}
+.sidebar li a:hover{
+	border-left: 7px solid #17a2b8;
+	background: #eee;
+	color: #555 !important;
+} 
