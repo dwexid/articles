@@ -41,7 +41,7 @@
                       <td><?=$res->judul?></td>
                       <td><?=$res->keyword?></td>
                       <td>
-                        <a href="#" class="btn btn-success btn-sm btn-block" style="padding:2px 10px">Detail</a>
+                        <a href="<?=base_url('article/detail/'.$res->id_artikel)?>" class="btn btn-success btn-sm btn-block" style="padding:2px 10px">Detail</a>
                       </td>
                     </tr>
                   </tbody>

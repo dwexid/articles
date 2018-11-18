@@ -8,8 +8,8 @@ class m_article extends CI_Model{
 	}
 
 	public function getById($id){
-		$res = $this->db->get('artikel')
-						->where('id', $id);
+		$res = $this->db->where('id_artikel', $id)
+						->get('artikel');
 
 		return $res->row();
 	}
