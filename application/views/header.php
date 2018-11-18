@@ -9,9 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Dashboard</title>
+    <title>Journal Articles</title>
 
     <!-- Bootstrap core CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400" rel="stylesheet">
     <link href="<?=base_url()?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template-->
@@ -30,9 +31,9 @@
 
     <nav class="navbar navbar-expand navbar-dark static-top bg-info" style="">
 
-      <a class="navbar-brand mr-1" href="index.html">[ A R T I C L E ]</a>
+      <a class="navbar-brand mr-1" href="<?=base_url()?>"><i class="fa fa-bookmark"></i> &nbsp;Journal Articles</a>
 
-      <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+      <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#" style="padding-left: 20px">
         <i class="fas fa-bars"></i>
       </button>
 
@@ -49,21 +50,6 @@
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
             <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown no-arrow mx-1">
-          <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-envelope fa-fw"></i>
-            <span class="badge badge-danger">7</span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </li>
         <li class="nav-item dropdown no-arrow">
@@ -71,10 +57,13 @@
             <i class="fas fa-user-circle fa-fw"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-            <a class="dropdown-item" href="#">Settings</a>
-            <a class="dropdown-item" href="#">Activity Log</a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-cog"></i>&nbsp; Settings</a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-list"></i>&nbsp; Activity Log</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+              <i class="fa fa-power-off"></i>&nbsp; Logout</a>
           </div>
         </li>
       </ul>

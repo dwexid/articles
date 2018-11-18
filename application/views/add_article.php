@@ -1,3 +1,8 @@
+<?php
+      $this->load->view('header');
+      $this->load->view('navbar');
+?>
+
   <div id="content-wrapper">
 
         <div class="container-fluid">
@@ -17,7 +22,7 @@
             </div>
             <div class="card-body">
               <div class="col-md-10 offset-md-1">
-              <form class="form-horizontal" method="post" action="artikel/add" enctype="multipart/form-data">
+              <form class="form-horizontal" method="post" action="<?=base_url('author/addArticle')?>" enctype="multipart/form-data">
 
                 <div class="form-group">
                   <label for="penulis" class="control-label">Nama Penulis</label>
@@ -47,7 +52,7 @@
                   <label for="rekomendasi" class="control-label">Rekomendasi Jurnal/Partner</label>
                   <select class="form-control" name="rekomendasi">
                     <option value="">-</option>
-                    <option value="">JOIN (Jurnal Online Informatika)</option>
+                    <option value="Jurnal Online Informatika">JOIN (Jurnal Online Informatika)</option>
                   </select>
                 </div>
                 <div class="col-md-4 row">
@@ -60,3 +65,7 @@
 
         </div>
         <!-- /.container-fluid -->
+
+<?php 
+      $this->load->view('footer');
+?>

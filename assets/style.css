@@ -1,10 +1,20 @@
 .btn, .form-control, .breadcrumb, .alert{
 	border-radius: 1px;
 }
-body{
+body,tr,td,a,h1,h2,.btn{
+	font-family: 'Noto Sans SC', sans-serif;
 }
-.card-header{
+.card-header,.card,.dropdown-menu{
 	border-radius: 1px !important;
+}
+.dropdown-item{
+	margin: auto;
+	font-size: 12px;
+	width: 93%;
+}
+.dropdown-item:hover{
+	background: #aaa;
+	color: #fff;
 }
 #content-wrapper{
 	background: #f2f2f2;
@@ -21,3 +31,15 @@ body{
 	background: #eee;
 	color: #555 !important;
 } 
+.jumbotron{
+	background: url('img/paper.jpg');
+	background-size: 100% auto;
+	background-position: bottom;
+}
+.home-desc{
+	margin: auto;
+	margin-bottom: 15px;
+	display: table;
+	opacity: .7;
+	padding: 10px 30px !important;
+}

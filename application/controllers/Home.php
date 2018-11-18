@@ -16,6 +16,10 @@ class Home extends CI_Controller{
 
 	}
 
+	public function indeks(){
+		$this->load->view('index-');
+	}
+
 	public function register(){
 		$this->form_validation->set_rules('firstName', 'Fist Name', 'required');
 		$this->form_validation->set_rules('username', 'Username', 'required');
