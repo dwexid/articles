@@ -8,16 +8,11 @@ class Home extends CI_Controller{
 		$this->load->model('m_user');
 	}
 	public function index(){
-
-		$this->load->view("header");
-		$this->load->view("navbar");
 		$this->load->view("index");
-		$this->load->view("footer");
-
 	}
 
-	public function indeks(){
-		$this->load->view('index-');
+	public function dashboard(){
+		$this->load->view('home');
 	}
 
 	public function register(){
@@ -68,7 +63,7 @@ class Home extends CI_Controller{
 				);
 				$this->session->set_userdata($data_session);
 
-				redirect('home');
+				redirect('home/dashboard');
 			}else{
 				$this->session->set_userdata('error', 'Username / Password salah');
 				redirect('home/login');
@@ -77,6 +72,11 @@ class Home extends CI_Controller{
 		}else{
 			$this->load->view('login');
 		}
+	}
+
+	public function logout(){
+		$this->session->sess_destroy();
+		redirect();
 	}
 
 }

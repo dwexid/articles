@@ -1,92 +1,147 @@
-  <div id="content-wrapper">
+<!DOCTYPE html>
+<html lang="en">
 
-        <div class="container-fluid">
+  <head>
 
-          <!-- Breadcrumbs-->
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a href="#">Dashboard</a>
-            </li>
-            <li class="breadcrumb-item active">Overview</li>
-          </ol>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-          <!-- Icon Cards-->
-          <div class="row">
-            <div class="col-xl-3 col-sm-6 mb-3">
-              <div class="card text-white bg-primary o-hidden h-100">
-                <div class="card-body">
-                  <div class="card-body-icon">
-                    <i class="fas fa-fw fa-comments"></i>
-                  </div>
-                  <div class="mr-5">26 New Messages!</div>
-                </div>
-                <a class="card-footer text-white clearfix small z-1" href="#">
-                  <span class="float-left">View Details</span>
-                  <span class="float-right">
-                    <i class="fas fa-angle-right"></i>
-                  </span>
-                </a>
+    <title>Journal Articles</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400" rel="stylesheet">
+    <link href="<?=base_url()?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="<?=base_url()?>assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <link href="<?=base_url()?>assets/style.css" rel="stylesheet">
+
+  </head>
+
+<body>
+
+  <div class="jumbotron jumbotron-fluid">
+    <nav class="navbar navbar-expand navbar-light">
+      <a class="navbar-brand text-white" href="#"><i class="fa fa-bookmark"></i> &nbsp;Journal Articles</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="btn border-info mr-sm-2 text-info" href="<?=base_url('home/login')?>">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-info ml-sm-2" href="<?=base_url('home/register')?>">Register</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container text-center py-5">
+      <h1 class="home-desc text-white display-4">Journal Articles</h1>
+      <p class="home-desc text-white lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+      <a href="#" class="display-4 text-white"><i class="fa fa-angle-down"></i></a>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row my-5 text-center">
+      <div class="col" style="border-right: 1px solid #ddd">
+        <p class="display-4">Author</p>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. 
+      </p>
+      </div>
+      <div class="col">
+        <p class="display-4">Partner</p>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. 
+      </p>
+      </div>
+    </div>
+    <div class="container my-3 text-white" id="Published">
+      <h3 class="text-center text-secondary">Published Journal</h3>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col py-5 bg-warning">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
               </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 mb-3">
-              <div class="card text-white bg-warning o-hidden h-100">
-                <div class="card-body">
-                  <div class="card-body-icon">
-                    <i class="fas fa-fw fa-list"></i>
-                  </div>
-                  <div class="mr-5">11 New Tasks!</div>
-                </div>
-                <a class="card-footer text-white clearfix small z-1" href="#">
-                  <span class="float-left">View Details</span>
-                  <span class="float-right">
-                    <i class="fas fa-angle-right"></i>
-                  </span>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 mb-3">
-              <div class="card text-white bg-success o-hidden h-100">
-                <div class="card-body">
-                  <div class="card-body-icon">
-                    <i class="fas fa-fw fa-shopping-cart"></i>
-                  </div>
-                  <div class="mr-5">123 New Orders!</div>
-                </div>
-                <a class="card-footer text-white clearfix small z-1" href="#">
-                  <span class="float-left">View Details</span>
-                  <span class="float-right">
-                    <i class="fas fa-angle-right"></i>
-                  </span>
-                </a>
-              </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 mb-3">
-              <div class="card text-white bg-danger o-hidden h-100">
-                <div class="card-body">
-                  <div class="card-body-icon">
-                    <i class="fas fa-fw fa-life-ring"></i>
-                  </div>
-                  <div class="mr-5">13 New Tickets!</div>
-                </div>
-                <a class="card-footer text-white clearfix small z-1" href="#">
-                  <span class="float-left">View Details</span>
-                  <span class="float-right">
-                    <i class="fas fa-angle-right"></i>
-                  </span>
-                </a>
+              <div class="col py-5 bg-danger">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
               </div>
             </div>
           </div>
-
-          <!-- Area Chart Example-->
-          <div class="card mb-3">
-            <div class="card-header bg-info text-white">
-              <i class="fas fa-chart-area"></i>
-              Naon Example</div>
-            <div class="card-body">
-              <canvas id="myAreaChart" width="100%" height="30"></canvas>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col py-5 bg-info">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              </div>
+              <div class="col py-5 bg-secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              </div>
             </div>
-          </div>       
-
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col py-5 bg-success">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              </div>
+              <div class="col py-5 bg-primary">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- /.container-fluid -->
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="<?=base_url()?>assets/jquery/jquery.min.js"></script>
+    <script src="<?=base_url()?>assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="<?=base_url()?>assets/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Page level plugin JavaScript-->
+    <script src="<?=base_url()?>assets/datatables/jquery.dataTables.js"></script>
+    <script src="<?=base_url()?>assets/datatables/dataTables.bootstrap4.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="<?=base_url()?>assets/sb-admin.js"></script>
+
+</body>
+</html> 

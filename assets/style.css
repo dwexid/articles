@@ -33,8 +33,10 @@ body,tr,td,a,h1,h2,.btn{
 } 
 .jumbotron{
 	background: url('img/paper.jpg');
-	background-size: 100% auto;
-	background-position: bottom;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-top: 0 !important;
 }
 .home-desc{
 	margin: auto;
