@@ -6,6 +6,18 @@ class Author extends CI_Controller{
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('m_article');
+
+		if(!$this->session->userdata('username')){
+			redirect('home/login');
+		}else{
+			if($this->session->userdata('role')!='penulis'){
+				redirect();
+			}
+		}
+	}
+
+	public function index(){
+		$this->load->view('home');
 	}
 
 	public function addArticle(){

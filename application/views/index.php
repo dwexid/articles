@@ -32,12 +32,39 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="btn border-info mr-sm-2 text-info" href="<?=base_url('home/login')?>">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-info ml-sm-2" href="<?=base_url('home/register')?>">Register</a>
-          </li>
+          <?php if($this->session->userdata('username')): ?>
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link text-white" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i>
+                <span class="badge badge-danger">9+</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link text-white" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <?=$this->session->userdata('username')?>
+                <i class="fas fa-user-circle fa-fw"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fa fa-cog"></i>&nbsp; Settings</a>
+                <a class="dropdown-item" href="#">
+                  <i class="fa fa-list"></i>&nbsp; Activity Log</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="<?=base_url('home/logout')?>">
+                  <i class="fa fa-power-off"></i>&nbsp; Logout</a>
+              </div>
+            </li>
+          <?php else: ?>
+            <li class="nav-item">
+              <a class="btn border-info mr-sm-2 text-info" href="<?=base_url('home/login')?>">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-info ml-sm-2" href="<?=base_url('home/register')?>">Register</a>
+            </li>
+          <?php endif; ?>
         </ul>
       </div>
     </nav>

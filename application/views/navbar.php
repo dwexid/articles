@@ -3,7 +3,7 @@
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav bg-light" style="">
         <li class="nav-item active">
-          <a class="nav-link" href="<?=base_url()?>">
+          <a class="nav-link" href="<?=$this->session->userdata('role')=='pengelola'?base_url('partner'):base_url('author')?>">
             <i class="fas fa-fw fa-tachometer-alt"> </i>
             <span>Dashboard</span>
           </a>

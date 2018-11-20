@@ -12,10 +12,18 @@ class Home extends CI_Controller{
 	}
 
 	public function dashboard(){
-		$this->load->view('home');
+		if($this->session->userdata('username')){
+			$this->load->view('home');
+		}else{
+			redirect('home/login');
+		}
 	}
 
 	public function register(){
+		if($this->session->userdata('username')){
+			redirect();
+		}
+
 		$this->form_validation->set_rules('firstName', 'Fist Name', 'required');
 		$this->form_validation->set_rules('username', 'Username', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
@@ -42,6 +50,10 @@ class Home extends CI_Controller{
 	}
 
 	public function login(){
+		if($this->session->userdata('username')){
+			redirect();
+		}
+		
 		$this->form_validation->set_rules('username', 'Username', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
 
@@ -59,7 +71,7 @@ class Home extends CI_Controller{
 			if($validate != null){
 				$data_session = array(
 					'username'	=> $username,
-					'role'		=> $role
+					'role'		=> $validate->role
 				);
 				$this->session->set_userdata($data_session);
 

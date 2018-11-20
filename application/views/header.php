@@ -27,7 +27,7 @@
 
   </head>
 
-  <body id="page-top">
+  <body id="page-top" <?=!$this->session->userdata('username')?"style='background: #f7f7f7'":""?>>
 
     <nav class="navbar navbar-expand navbar-dark static-top bg-info" style="">
 
